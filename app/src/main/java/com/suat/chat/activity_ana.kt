@@ -19,10 +19,8 @@ class activity_ana : AppCompatActivity() {
                 R.id.action_kanal->message="Home"
                 R.id.action_ara->message="Notif"
                 R.id.action_profil->message="Settings"
-
             }
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-            supportFragmentManager.beginTransaction().replace(R.id.frame,AnaFragment.newInstance("asdas","asdasdf")).commit()
+            supportFragmentManager.beginTransaction().replace(R.id.frame,ProfilFragment.newInstance(Session(kID = null,kAdi = "ogoş",kFoto = null,kSifre = null))).commit()
             return@setOnNavigationItemSelectedListener true
         }
     }
