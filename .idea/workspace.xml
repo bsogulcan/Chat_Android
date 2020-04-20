@@ -40,8 +40,8 @@
         <option value="layoutResourceFile" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
-        <option value="resourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -59,17 +59,17 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SUAT\AndroidStudioProjects\Chat\app\src\main\res\drawable" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="com.suat.chat" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SUAT\AndroidStudioProjects\Chat\app\src\main\res\mipmap-hdpi" />
       <recent name="C:\Users\SUAT\AndroidStudioProjects\Chat\app\src\main\res\mipmap-xhdpi" />
       <recent name="C:\Users\SUAT\AndroidStudioProjects\Chat\app\src\main\res\drawable" />
       <recent name="C:\Users\SUAT\AndroidStudioProjects\Chat\app\src\main\res\mipmap-mdpi" />
+    </key>
+    <key name="android.template.packageName">
+      <recent name="com.suat.chat" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SUAT\AndroidStudioProjects\Chat\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunDashboard">

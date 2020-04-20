@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".kayit_ol"></activity>
+        <activity android:name=".activity_ana"></activity>
+        <activity android:name=".kayit_ol" />
         <activity
             android:name=".mesaj_pop_up"
             android:theme="@style/AppTheme.PopMe" />

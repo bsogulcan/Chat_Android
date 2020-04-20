@@ -172,9 +172,15 @@ class MainActivity : AppCompatActivity() {
             out.println(edtKullaniciAdi.text.toString() + "|" + edtSifre.text.toString())
         }
 
-        val intent = Intent(this, MessagesActivity::class.java)
-        intent.putExtra("session", _session as Serializable)
+        //val intent = Intent(this, MessagesActivity::class.java)
+        //intent.putExtra("session", _session as Serializable)
+        //startActivity(intent);
+
+        val intent = Intent(this, activity_ana::class.java)
         startActivity(intent);
+
+
+
 //        linlaHeaderProgress.setVisibility(View.INVISIBLE);
 
     }
