@@ -28,6 +28,10 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import okhttp3.MediaType.Companion.toMediaType
 import java.util.concurrent.CountDownLatch
 import android.util.Base64;
+import kotlinx.android.synthetic.main.activity_kayit_ol.edtKullaniciAdi
+import kotlinx.android.synthetic.main.activity_kayit_ol.edtSifre
+import kotlinx.android.synthetic.main.activity_kayit_ol.imgKullanici
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.ByteArrayOutputStream;
 
 class kayit_ol : AppCompatActivity() {
@@ -38,16 +42,54 @@ class kayit_ol : AppCompatActivity() {
     }
 
     fun btnFotografSec(view: View){
-        pickImageFromGallery()
-
+        //pickImageFromGallery()
+        var izin = checkPersmission()
+        if (izin != true) {
+            requestPermission();
+        } else {
+            takePicture()
+        }
     }
 
     private fun pickImageFromGallery() {
-        //Intent to pick image
-        val intent = Intent(Intent.ACTION_PICK)
+
+
+
+
+
+        /*val intent = Intent(Intent.ACTION_PICK)
         intent.type = "download/*"
-        startActivityForResult(intent, IMAGE_PICK_CODE)
+        startActivityForResult(intent, IMAGE_PICK_CODE)*/
+         */
+
     }
+    private fun takePicture() {
+        val intent: Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, 2)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 2 && resultCode == Activity.RESULT_OK) {
+            var bitmap: Bitmap? = data?.extras?.get("data") as Bitmap
+            imgKullanici.setImageBitmap(bitmap)
+        }
+    }
+
+    private fun requestPermission() {
+        ActivityCompat.requestPermissions(this, arrayOf(READ_EXTERNAL_STORAGE, CAMERA), 1)
+    }
+
+    private fun checkPersmission(): Boolean {
+        return (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) ==
+                PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(
+            this,
+            android.Manifest.permission.READ_EXTERNAL_STORAGE
+        ) == PackageManager.PERMISSION_GRANTED)
+    }
+
+
+
     companion object {
         //image pick code
         private val IMAGE_PICK_CODE = 1000;
@@ -70,13 +112,13 @@ class kayit_ol : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+   /* override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE){
 
             imgKullanici.setImageURI(data?.data)
         }
-    }
+    } */
 
     fun GirisYap(view: View){
         val intent = Intent(this, MainActivity::class.java)
