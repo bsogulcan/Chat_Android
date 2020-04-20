@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullscreen_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".kayit_ol">
+
+
+
+    <LinearLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgKullanici"
+            android:layout_width="191dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="8dp"
+            android:foreground="@drawable/image_view_round"
+            android:onClick="btnFotografSec"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/full_hd" />
+
+        <EditText
+            android:id="@+id/edtKullaniciAdi"
+            android:layout_width="fill_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:ems="10"
+            android:hint="Kullanıcı Adı"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/imgKullanici"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btnKayitOl"
+            android:layout_width="fill_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="KayitOl"
+            android:text="Kayıt Ol"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/edtSifre"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/edtSifre"
+            android:layout_width="fill_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorPrimary"
+            android:ems="10"
+            android:hint="Şifre"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_background"
+            android:textColorHint="@color/cardview_light_background"
+            app:layout_constraintTop_toBottomOf="@+id/edtKullaniciAdi"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/lblGirisYap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="GirisYap"
+            android:text="Zaten bir hesabın var mı? Giriş Yap"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnKayitOl"
+            app:layout_constraintVertical_bias="0.052" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_messages"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        tools:context=".MessagesActivity">
+
+        <FrameLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/txtOdaAdi"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Genel"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="2dp"
+                app:autoSizeTextType="uniform" />
+        </FrameLayout>
+
+    <ListView
+    android:id="@+id/listMesajlar"
+    android:layout_width="match_parent"
+    android:layout_height="609dp"
+    android:layout_weight="1"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:divider="@null"
+    android:longClickable="true"
+    android:stackFromBottom="true"
+    android:transcriptMode="alwaysScroll"
+        />
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:minHeight="150dp">
+
+                <EditText
+                    android:id="@+id/edtMesaj"
+                    android:layout_width="582dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/text_and_button"
+                    android:ems="10"
+                    android:hint="Mesaj"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textColorHint="@color/colorDark"
+                    android:editable="true"/>
+
+                <Button
+                    android:id="@+id/btnGonder"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/send"
+                    android:hapticFeedbackEnabled="false"
+                    android:onClick="btnMesajGonder"
+                    android:textColor="@color/colorDark" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
