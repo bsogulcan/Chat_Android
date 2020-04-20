@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item   android:title="Home"
-    android:id="@+id/action_home"
-        android:icon="@drawable/ic_home_black_24dp" />
+    <item   android:title="Kanallar"
+    android:id="@+id/action_kanal"
+        android:icon="@drawable/ic_view_headline_black_24dp" />
 
-    <item   android:title="Notifications"
-    android:id="@+id/action_notif"
-        android:icon="@drawable/ic_home_black_24dp" />
+    <item   android:title="Ara"
+    android:id="@+id/action_ara"
+        android:icon="@drawable/ic_search_black_24dp" />
 
-    <item   android:title="Settings"
-    android:id="@+id/settings"
-        android:icon="@drawable/ic_home_black_24dp" />
+    <item   android:title="Profil"
+    android:id="@+id/action_profil"
+        android:icon="@drawable/ic_person_black_24dp" />
 
 
 

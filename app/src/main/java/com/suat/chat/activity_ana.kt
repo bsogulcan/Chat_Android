@@ -16,12 +16,13 @@ class activity_ana : AppCompatActivity() {
 
             var message=""
             when(item.itemId){
-                R.id.action_home->message="Home"
-                R.id.action_notif->message="Notif"
-                R.id.settings->message="Settings"
+                R.id.action_kanal->message="Home"
+                R.id.action_ara->message="Notif"
+                R.id.action_profil->message="Settings"
 
             }
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+            supportFragmentManager.beginTransaction().replace(R.id.frame,AnaFragment.newInstance("asdas","asdasdf")).commit()
             return@setOnNavigationItemSelectedListener true
         }
     }
